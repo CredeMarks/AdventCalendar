@@ -225,7 +225,10 @@
     for (let day = 1; day <= totalDays; day++) {
       calendar.appendChild(createDoor(day));
     }
+
+    if (day === 1 || day === 7) door.classList.add("open");
   </script>
 </body>
 </html>
+
 
