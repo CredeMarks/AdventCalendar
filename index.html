@@ -190,6 +190,10 @@
       const door = document.createElement("div");
       door.className = "door";
       door.dataset.day = day;
+        const alwaysOpen = [3, 7, 12]; // <— EDIT THESE
+  if (alwaysOpen.includes(day)) {
+    door.classList.add("open");
+  }
 
       const inner = document.createElement("div");
       inner.className = "door-inner";
@@ -225,10 +229,9 @@
     for (let day = 1; day <= totalDays; day++) {
       calendar.appendChild(createDoor(day));
     }
-
-    if (day === 1 || day === 7) door.classList.add("open");
   </script>
 </body>
 </html>
+
 
 
